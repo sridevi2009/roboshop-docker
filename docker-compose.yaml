@@ -62,5 +62,13 @@ services:
     - RABBITMQ_DEFAULT_USER=roboshop
     - RABBITMQ_DEFAULT_PASS=roboshop123
 
+  payment:
+    image: payment:v1
+    container_name: payment 
+    depends_on:
+    - rabbitmq
+    - user
+    - cart 
+
 
 
