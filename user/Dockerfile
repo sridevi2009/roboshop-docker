@@ -8,6 +8,4 @@ USER roboshop
 COPY package.json /opt/server/
 COPY server.js /opt/server/
 RUN npm install
-RUN echo hello docker
-RUn adduser cart
 CMD ["node","server.js"]
